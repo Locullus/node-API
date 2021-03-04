@@ -60,7 +60,20 @@ router.put('/:id', (req, res) => {
     );
 });
 
+// =================== METHODE DELETE =================== //
+router.delete('/:id', (req, res) => {
+    if(!ObjectID.isValid(req.params.id)) {
+        return res.status(400).send('Id unknown : ' + err);
+    }
 
+    PostsModel.findByIdAndRemove(
+        req.params.id,
+        (err, docs) => {
+            if(err) throw err;
+            res.send(docs);
+        }
+    );
+});
 
 
 module.exports = router;
