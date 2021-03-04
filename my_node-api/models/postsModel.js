@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+// middleware qui modifie le comportement par défaut de la méthode findByIdAndUpdate() qui est dépréciée (recommandation de mongoose)
+mongoose.set('useFindAndModify', false);
 
 // on crée un modèle pour insérer des données dans la bd
 const PostsModel = mongoose.model(
