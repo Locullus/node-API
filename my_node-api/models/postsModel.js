@@ -21,4 +21,7 @@ const PostsModel = mongoose.model(
     },
     // 3e argument : la collection (la table) dans laquelle l'objet est ajouté
     "posts"
-)
+);
+
+// on exporte le modèle pour qu'il soit accessible de partout dans l'appli
+module.exports = { PostsModel };
