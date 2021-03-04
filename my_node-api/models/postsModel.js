@@ -16,7 +16,7 @@ const PostsModel = mongoose.model(
         },
         date: {
             type: Date,
-            Default: Date.now
+            default: Date.now
         }
     },
     // 3e argument : la collection (la table) dans laquelle l'objet est ajouté
