@@ -1,0 +1,3 @@
+# déclaration des chemins vers les dossiers et fichiers que l'on veut ignorer
+
+/node_modules
